@@ -1,3 +1,4 @@
+//NO LOGRO QUE SEA VEA EL P EN TIEMPO REAL NI CAMBIAR EL BACKGROUND
 const campo = document.getElementById("campoTexto");
 const salida = document.getElementById("salidaTexto");
 
