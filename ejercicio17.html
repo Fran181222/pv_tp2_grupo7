@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contar letra "a"</title>
+</head>
+<body>
+  <h2>Contador de letras "a"</h2>
+
+  <label for="texto">Escribe un texto:</label><br>
+  <textarea id="texto" rows="4" cols="40"></textarea><br><br>
+
+  <button onclick="contarLetraA()">Contar letras 'a'</button>
+
+  <p id="resultado"></p>
+
+  <script>
+  let contarLetraA = () => {
+      const texto = document.getElementById("texto").value;
+      let contador = 0;
+
+      for (let i = 0; i < texto.length; i++) {
+        if (texto[i].toLowerCase() === "a") {
+          contador++;
+        }
+      }
+      document.getElementById("resultado").textContent =
+        `La letra "a" aparece ${contador} vez/veces.`;
+    }
+  </script>
+</body>
+</html>
