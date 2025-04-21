@@ -13,6 +13,18 @@
     <button type="button" id="btnvalidar">validar</button>
     <p id="resultado">Nombre del mes</p>
 </div>
-    <script type="module" src="/pv_tp2_grupo7/JS/ejercicio15.js"></script>
+    <script>
+        const nombremes = () =>{
+    let mes = parseFloat(document.getElementById("txtmes").value);
+    const meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+
+    if (mes>0 && mes<=12) {
+        document.getElementById("resultado").innerText=`Nombre del mes: ${meses[mes-1]}`;
+    } else {
+        document.getElementById("resultado").innerText=`No es un mes`;
+    }
+}
+document.getElementById("btnvalidar").addEventListener("click",nombremes);
+    </script>
 </body>
 </html>
