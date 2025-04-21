@@ -11,6 +11,12 @@
 Ingrese su nombre: <input type="text" id="nombre">
 <button type="button" id="btnvalidar">Validar</button>
     </form>
-    <script type="module" src="/pv_tp2_grupo7/JS/ejercicio9.js"></script>
+    <script>
+        const saludar = () => {
+    const nombre = document.getElementById("nombre").value;
+    console.log(`Hola ${nombre}, bienvenido a Programaciòn Visual!`);
+};
+document.getElementById("btnvalidar").addEventListener("click",saludar);
+    </script>
 </body>
 </html>
