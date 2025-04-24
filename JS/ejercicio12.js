@@ -3,9 +3,10 @@
 let input = prompt("Ingrese un numero");
 let numero = Number(input);
 
-if (numero % 2 === 0) {
-    alert("El numero es par");
-    }
-    else{
+    if(numero === 0){
+        alert ("El numero es 0")
+    }else if (numero % 2 === 0) {
+        alert("El numero es par");
+    }else{
         alert("El numero no es par");
-    }  
+    }

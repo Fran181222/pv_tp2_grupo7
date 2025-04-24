@@ -1,19 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/ejercicioX.css">
     <title>Ejercicio 13</title>
+    <script>
+        function mostrarArreglo(arreglo) {
+            const resultadoDiv = document.getElementById("resultado");
+            resultadoDiv.innerHTML = ""; // Limpiar resultados anteriores
+
+            for (let i = 0; i < arreglo.length; i++) {
+                console.log(arreglo[i]);
+                const elemento = document.createElement("p");
+                elemento.textContent = arreglo[i];
+                resultadoDiv.appendChild(elemento);
+            }
+        }
+
+        function procesarEntrada() {
+            const entrada = document.getElementById("entradaNumeros").value;
+            const numeros = entrada.split(',').map(num => parseFloat(num.trim())).filter(num => !isNaN(num));
+            mostrarArreglo(numeros);
+        }
+    </script>
 </head>
 <body>
+    <h2>Ejercicio 13</h2>
+    <p style="color: white;">Ingresa números separados por comas:</p>
     
-    <script>
-    let mostrarArreglo = (array) => {
-        array.forEach(elemento => console.log(elemento));
-    };
-    // Ejemplo de uso
-    let numeros = [5, 12, 8, 33, 7];
-    mostrarArreglo(numeros);
-    </script>
+    <input type="text" id="entradaNumeros" placeholder="Escribir aqui...">
+    <button onclick="procesarEntrada()" style="margin: 10px;">Mostrar Números</button>
+    
+    <h2>Resultado:</h2>
+    <div id="resultado" style="color: white;"></div>
 </body>
 </html>
