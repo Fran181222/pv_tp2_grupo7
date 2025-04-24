@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ejercicio15</title>
+    <link rel="stylesheet" href="/css/ejercicioX.css">
+    <title>Ejercicio 15</title>
 </head>
 <body>
 <div>
@@ -11,20 +12,20 @@
     <input type="number" id="txtmes" style="width: 15%;"
         placeholder="Ingrese el numero del mes"> 
     <button type="button" id="btnvalidar">validar</button>
-    <p id="resultado">Nombre del mes</p>
+    <p id="resultado" style="color: white; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; padding: 15px;">Nombre del mes</p>
 </div>
     <script>
         const nombremes = () =>{
-    let mes = parseFloat(document.getElementById("txtmes").value);
-    const meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+            let mes = parseFloat(document.getElementById("txtmes").value);
+            const meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
 
-    if (mes>0 && mes<=12) {
-        document.getElementById("resultado").innerText=`Nombre del mes: ${meses[mes-1]}`;
-    } else {
-        document.getElementById("resultado").innerText=`No es un mes`;
-    }
-}
-document.getElementById("btnvalidar").addEventListener("click",nombremes);
+        if (mes>0 && mes<=12) {
+            document.getElementById("resultado").innerText=`Nombre del mes: ${meses[mes-1]}`;
+        } else {
+            document.getElementById("resultado").innerText=`No es un mes`;
+        }
+        }
+        document.getElementById("btnvalidar").addEventListener("click",nombremes);
     </script>
 </body>
 </html>

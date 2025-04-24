@@ -3,17 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/ejercicioX.css">
   <title>Contar letra "a"</title>
 </head>
 <body>
   <h2>Contador de letras "a"</h2>
 
   <label for="texto">Escribe un texto:</label><br>
-  <textarea id="texto" rows="4" cols="40"></textarea><br><br>
+  <textarea id="texto" rows="4" cols="40" style="border-radius: 5px;"></textarea><br><br>
 
   <button onclick="contarLetraA()">Contar letras 'a'</button>
 
-  <p id="resultado"></p>
+  <p id="resultado" style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"></p>
 
   <script>
   let contarLetraA = () => {

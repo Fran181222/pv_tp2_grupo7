@@ -1,6 +1,6 @@
 const sumarRango = (inicial, final) => {
     if (inicial > final) {
-        return "El numero inicicial debe ser menor que el numero final"
+        return "El numero inicial debe ser menor que el numero final"
     }
     let suma = 0
     for (let i = inicial; i <= final; i++) {
