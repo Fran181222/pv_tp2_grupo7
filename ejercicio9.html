@@ -4,19 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/ejercicioX.css">
+    <title>Ejercicio 9</title>
 </head>
 <body>
     <form>
-Ingrese su nombre: <input type="text" id="nombre">
-<button type="button" id="btnvalidar">Validar</button>
+        <h2>Ingrese su nombre:</h2>  
+        <input type="text" id="nombre">
+        <button type="button" id="btnvalidar">Mostrar</button>
     </form>
     <script>
         const saludar = () => {
-    const nombre = document.getElementById("nombre").value;
-    console.log(`Hola ${nombre}, bienvenido a Programaciòn Visual!`);
-};
-document.getElementById("btnvalidar").addEventListener("click",saludar);
+        const nombre = document.getElementById("nombre").value;
+        alert(`Hola ${nombre}, bienvenido a Programaciòn Visual!`);
+        };
+        document.getElementById("btnvalidar").addEventListener("click",saludar);
     </script>
 </body>
 </html>

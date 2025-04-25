@@ -10,5 +10,25 @@
     <h1>Duplicar arreglos</h1>
     <button onclick="numeros()">Ingresar números</button>
     <p id="resultado"></p>
+    <title>Ejercicio 14</title>
+</head>
+<body>
+    <script>
+        function duplicar(arr) {
+            return arr.map(function(numero) {
+                return numero * 2;
+            });
+        }
+        const entrada = prompt("Ingresa números separados por coma (por ejemplo: 1,2,3,4):");
+
+        const numerosOriginales = entrada.split(",").map(function(item) {
+            return parseFloat(item.trim());
+        });
+
+        const numerosDuplicados = duplicar(numerosOriginales);
+
+        alert("Arreglo original: [" + numerosOriginales.join(", ") + "]\n" +
+              "Arreglo duplicado: [" + numerosDuplicados.join(", ") + "]");
+    </script>
 </body>
 </html>
